@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖 Happy Vat Pournima 💖</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+overflow:hidden;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#ffe6f0,#fff0f5);
+text-align:center;
+}
+
+.container{
+position:relative;
+z-index:10;
+padding-top:40px;
+}
+
+h1{
+font-size:40px;
+color:#d81b60;
+animation:glow 2s infinite alternate;
+}
+
+.names{
+font-size:35px;
+color:#ff0066;
+font-weight:bold;
+margin-top:15px;
+}
+
+.message{
+width:90%;
+max-width:750px;
+margin:25px auto;
+padding:20px;
+background:rgba(255,255,255,0.4);
+border-radius:25px;
+font-size:24px;
+line-height:1.8;
+color:#880e4f;
+font-weight:bold;
+backdrop-filter:blur(5px);
+}
+
+.btn{
+padding:15px 30px;
+font-size:20px;
+background:#ff4081;
+color:white;
+border:none;
+border-radius:50px;
+cursor:pointer;
+box-shadow:0 0 20px pink;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+#photo{
+display:none;
+margin-top:25px;
+}
+
+#photo img{
+width:330px;
+max-width:90%;
+border-radius:25px;
+border:5px solid white;
+box-shadow:0 0 30px #ff4081;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px pink;
+}
+to{
+text-shadow:0 0 30px red;
+}
+}
+
+.heart,.rose{
+position:fixed;
+top:-20px;
+font-size:28px;
+animation:fall linear forwards;
+pointer-events:none;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌳💖 वटपौर्णिमेच्या हार्दिक शुभेच्छा 💖🌳</h1>
+
+<div class="names">
+Sandeep ❤️ Supriya
+</div>
+
+<div class="message">
+🙏 वटवृक्षापाशी केलेली माझी एकच प्रार्थना... ❤️<br><br>
+
+"सात जन्मी हाच नवरा मिळू दे..." 💞<br><br>
+
+प्रेम, विश्वास, जिव्हाळा आणि साथ अशीच कायम राहो... 🌹<br><br>
+
+माझ्या आयुष्यातील प्रत्येक क्षण सुंदर करणाऱ्या
+माझ्या Sandeep साठी खूप सारा प्रेमभरला नमस्कार... ❤️
+
+</div>
+
+<button class="btn" onclick="showPhoto()">
+📸 आमचा फोटो पाहा 💖
+</button>
+
+<div id="photo">
+<br>
+<img src="couple.jpg" alt="Couple Photo">
+</div>
+
+</div>
+
+<script>
+function showPhoto(){
+document.getElementById("photo").style.display="block";
+}
+
+function createHeart(){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),9000);
+}
+
+function createRose(){
+let r=document.createElement("div");
+r.className="rose";
+r.innerHTML="🌹";
+r.style.left=Math.random()*100+"vw";
+r.style.animationDuration=(5+Math.random()*5)+"s";
+document.body.appendChild(r);
+setTimeout(()=>r.remove(),10000);
+}
+
+setInterval(createHeart,250);
+setInterval(createRose,450);
+</script>
+
+</body>
+</html>
